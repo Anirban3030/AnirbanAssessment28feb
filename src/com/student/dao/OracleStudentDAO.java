@@ -13,7 +13,7 @@ public class OracleStudentDAO {
 	private Connection getConnection() throws Exception {
         String url = "jdbc:postgresql://localhost:5432/testdb";
         String username = "postgres";
-        String password = "user******";
+        String password = "user*****";
 
         return DriverManager.getConnection(url, username, password);
     }
