@@ -10,12 +10,12 @@ public class CreateTable {
 
         String url = "jdbc:postgresql://localhost:5432/studentdb";
         String username = "postgres";
-        String password = "user113030";   
+        String password = "user******";   
 
-        String sql = "CREATE TABLE IF NOT EXISTS students ("
+        String sql = "CREATE TABLE students ("
                 + "id SERIAL PRIMARY KEY, "
                 + "name VARCHAR(50) NOT NULL, "
-                + "email VARCHAR(100) UNIQUE NOT NULL, "
+                + "email VARCHAR(50) UNIQUE NOT NULL, "
                 + "age INT CHECK (age > 0), "
                 + "mobile BIGINT"
                 + ")";
