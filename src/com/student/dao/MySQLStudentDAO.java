@@ -11,7 +11,7 @@ public class MySQLStudentDAO implements StudentDAO{
 	private Connection getConnection() throws Exception {
         String url = "jdbc:postgresql://localhost:5432/studentdb";
         String username = "postgres";
-        String password = "user113030";
+        String password = "user******";
 
         return DriverManager.getConnection(url, username, password);
     }
