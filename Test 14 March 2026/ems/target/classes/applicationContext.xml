@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean-->
+	<bean id="address"
+		class="com.capgemini.spring_core.ems.Address">
+		<property name="id" value="1" />
+		<property name="city" value="Bangalore" />
+		<property name="state" value="Karnataka" />
+		<property name="country" value="India" />
+		<property name="pincode" value="560001" />
+	</bean>
+
+	<!-- bean -->
+	<bean id="employee"
+		class="com.capgemini.spring_core.ems.Employee">
+
+		<!-- Constructor injection-->
+		<constructor-arg ref="address" />
+
+		<!-- Setter injection-->
+		<property name="id" value="101" />
+		<property name="name" value="Mike" />
+		<property name="email" value="mike@gmail.com" />
+		<property name="password" value="mike@123" />
+		<property name="age" value="28" />
+		<property name="salary" value="60000" />
+	</bean>
+
+	<bean id="empS"
+		class="com.capgemini.spring_core.ems.EmployeeServiceImplementation">
+		<property name="employee" ref="employee" />
+	</bean>
+
+</beans>
